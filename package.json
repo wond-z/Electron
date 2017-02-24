@@ -1,0 +1,18 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "description": "my-first-app",
+  "main": "main.js",
+  "dependencies": {
+    "electron-prebuilt": "^1.4.0"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "wond-z",
+  "license": "ISC"
+}

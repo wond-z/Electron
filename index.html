@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        We are using node <script>document.write(process.versions.node)</script>,
+        Chrome <script>document.write(process.versions.chrome)</script>,
+        and Electron <script>document.write(process.versions.electron)</script>.
+        <button type="button" name="button" id="new-window">OPEN NEW</button>
+    </body>
+    <script type="text/javascript">
+        'use strict'
+
+        const {ipcRenderer} = require('electron')
+        // console.log(ipcRenderer.sendSync('synchronous-message', 'this is syn message'))
+
+        const BrowserWindow = require('electron').remote.BrowserWindow
+        const path = require('path')
+        const newWindowBtn = document.getElementById('new-window')
+
+        newWindowBtn.addEventListener('click', function (event) {
+            ipcRenderer.send('asynchronous-message', 'this is asyn message')
+
+        })
+
+    </script>
+</html>
