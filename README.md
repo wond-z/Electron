@@ -1,2 +1,5 @@
-# Electron
-electron note
+# quick-start
+包含：
+- electron基本环境创建
+- 渲染进程向主进程发送消息
+- 主进程将渲染进程发送过来的消息再发送给创建的新窗口
